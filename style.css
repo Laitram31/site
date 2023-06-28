@@ -23,7 +23,18 @@ body{
 .square::before{
 	content: " ";
 	background-image: "img/poggers.jpg";
-	size: auto;
+	width: 100px;
+}
+
+.confetti-container{
+	position: fixed;
+	z-index: -1;
+}
+
+.confetti{
+	position: absolute;
+	top: 40%;
+	max-height: 25px;
 }
 
 @keyframes banner-anim{
