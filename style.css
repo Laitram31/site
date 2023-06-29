@@ -27,14 +27,39 @@ body{
 }
 
 .confetti-container{
-	position: fixed;
-	z-index: -1;
+	position: absolute;
+	top: 0;
+	width: 97vw;
+	height: 100vh;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
+	animation: move-confetti 5s linear infinite;
 }
 
 .confetti{
-	position: absolute;
-	top: 40%;
-	max-height: 25px;
+	max-width: 55px;
+	/*width: auto;*/
+	animation: spin 3s linear infinite;
+}
+
+@keyframes move-confetti{
+	50%{
+		transform: translateX(98%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+@keyframes spin{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(359deg);
+	}
 }
 
 @keyframes banner-anim{
