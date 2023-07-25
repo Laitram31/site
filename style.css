@@ -20,11 +20,11 @@ body{
 	justify-content: center;
 }
 
-.square::before{
+/*.square::before{
 	content: " ";
 	background-image: "img/poggers.jpg";
 	width: 100px;
-}
+}*/
 
 .confetti-container{
 	position: absolute;
@@ -35,21 +35,20 @@ body{
 	justify-content: space-evenly;
 	display: flex;
 	flex-direction: column;
-	animation: move-confetti 5s linear infinite;
 }
 
 .confetti{
 	max-width: 55px;
 	/*width: auto;*/
-	animation: spin 3s linear infinite;
+	animation: 3s linear infinite move-confetti;
 }
 
 @keyframes move-confetti{
 	50%{
-		transform: translateX(98%);
+		transform: translateX(90vw) rotate(180deg);
 	}
 	100%{
-		transform: translateX(0%);
+		transform: translateX(0) rotate(360deg);
 	}
 }
 
@@ -58,7 +57,7 @@ body{
 		transform:rotate(0deg);
 	}
 	to{
-		transform:rotate(359deg);
+		transform:rotate(360deg);
 	}
 }
 
